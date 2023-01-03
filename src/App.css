@@ -1,3 +1,9 @@
+:root {
+  --cell-dimension: 64px;
+  --cell-white-color: #fff;
+  --cell-black-color: #000;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +41,30 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.container {
+  background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
+  width: 100vw;
+  height: 100vh;
+}
+.main-board {
+  margin: 0 auto;
+  padding-top: 100px;
+  width: calc(var(--cell-dimension) * 8);
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+}
+.cell {
+  height: var(--cell-dimension);
+  width: var(--cell-dimension);
+}
+.cell.cell-white {
+  background-color: var(--cell-white-color);
+}
+.cell.cell-black {
+  background-color: var(--cell-black-color);
 }
